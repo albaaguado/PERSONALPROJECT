@@ -1,0 +1,73 @@
+.index-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* menos espacio entre las tarjetas */
+  margin: 20px 0;
+  position: relative;
+}
+
+.card {
+  width: 200px;       /* antes 292px */
+  height: 70px;       /* antes 92px */
+  border-radius: 10px;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;    /* menos padding */
+  box-sizing: border-box;
+}
+
+.available-now {
+  border-color: var(--primario---negro, black);
+  /* Establece el color de texto/icono para available-now */
+  color: var(--primario---negro, black);
+}
+
+.upcoming-soon {
+  border-color: var(--musical---reyleon---live, #C1121F);
+  background-color: var(--primario---blanco, white);
+  /* CLAVE: Esta línea establece el color (#C1121F) que el SVG hereda (currentColor) */
+  color: var(--musical---reyleon---live, #C1121F); 
+}
+
+.icon {
+  width: 32px;   /* antes 48px */
+  height: 32px;
+  position: relative;
+  margin-right: 15px;
+  /* Asegura que el SVG dentro de .icon se centre y ocupe todo el espacio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Regla para el icono SVG (ClockIconSVG en JSX) */
+.clock-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.available-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.card-text {
+  flex: 1;
+  text-align: center;
+  font-family: 'Konkhmer Sleokchher', sans-serif;
+  font-size: 24px;  /* antes 32px */
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+.available-now .card-text {
+  color: var(--primario---negro, black);
+}
+
+.upcoming-soon .card-text {
+  color: var(--musical---reyleon---live, #C1121F);
+}

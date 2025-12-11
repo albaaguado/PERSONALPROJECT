@@ -1,0 +1,33 @@
+.resumen-video {
+  width: 100%;
+  background-color: var(--primario---gris-0, #dfdddd);
+  text-align: center;
+  padding: 120px 0 100px; /* espacio interno arriba/abajo */
+}
+
+.resumen-texto {
+  display: inline-block;
+  text-align: right;
+  margin-left: 600px;
+  color: var(--primario---negro, #000);
+  padding: right 160px; /* 🔹 desplaza todo el texto hacia la derecha */
+}
+
+.texto-superior {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+  display: block;
+  text-align: right;
+}
+
+.texto-inferior {
+  font-family: "Great Vibes", cursive;
+  font-size: 64px;
+  line-height: 96px;
+  font-weight: 400;
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+}

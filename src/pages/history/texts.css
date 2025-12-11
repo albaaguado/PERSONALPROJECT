@@ -1,0 +1,22 @@
+.texts-container {
+  width: 80%;
+  margin: 60px auto 80px auto;
+  font-family: "Roboto", sans-serif;
+  color: #1e1e1e;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.texts-container h3 {
+  color: #b41f21;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.texts-container p {
+  margin-bottom: 20px;
+  text-align: justify;
+}

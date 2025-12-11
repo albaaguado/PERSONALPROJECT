@@ -1,0 +1,410 @@
+.header-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: var(--primario---gris-1, #e3e3e3);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.25s ease;
+}
+
+.logo {
+  height: 60px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 26px;
+}
+
+/* Estado cuando se ha hecho scroll: header más estrecho y sin logo */
+.header-container.scrolled {
+  height: 60px;
+  padding: 0 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.header-container.scrolled .logo {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
+
+.header-container.scrolled .btn {
+  padding: 4px 16px;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  color: var(--primario---negro, black);
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  text-decoration: none; /* quita subrayado */
+}
+
+.nav-item:hover {
+  background-color: #d4d4d4;
+}
+
+.nav-item.active {
+  background-color: #e3e3e3;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  font-size: 20px;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.neutral {
+  background: var(--primario---gris-1, #e3e3e3);
+  border: 1px solid var(--primario---gris-2, #757575);
+  color: black;
+}
+
+.btn.primary {
+  background: var(--primario---gris-3, #3f3f3f);
+  border: 1px solid var(--primario---gris-3, #3f3f3f);
+  color: var(--primario---gris-0, #f5f5f5);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carrito {
+  background-color: transparent;
+  border: none;
+  max-width: 2rem;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon-svg {
+  width: 40px;
+  height: 40px;
+  fill: #000;
+  transition: transform 0.2s ease;
+}
+
+.carrito:hover .cart-icon-svg {
+  transform: scale(1.1);
+}
+
+.carrito-dropdown {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 10px;
+  height: fit-content;
+  min-width: 350px;
+  width: fit-content;
+  top: 100%;
+  right: 0;
+  left: unset;
+  margin-left: unset;
+  margin-right: unset;
+}
+
+.carrito:hover .carrito-dropdown {
+  display: block;
+}
+
+.carrito-dropdown img {
+  width: 30px;
+}
+
+.carrito-dropdown .ticket-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.carrito-dropdown .btn-danger {
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 5px 9px;
+}
+
+.carrito-dropdown .btn-dark {
+  padding: 0 2px;
+  margin: 0 3px;
+}
+
+/* Utilidades para el carrito */
+.w-100 {
+  width: 100% !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos de tabla para el carrito */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.table thead {
+  vertical-align: bottom;
+}
+
+.table tbody {
+  vertical-align: inherit;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 0.5rem;
+  border-bottom-width: 1px;
+  border-color: #dee2e6;
+}
+
+.table th {
+  text-align: inherit;
+  font-weight: 700;
+}
+
+/* Estilos de botones para el carrito - específicos del dropdown */
+.carrito-dropdown .btn {
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.carrito-dropdown .btn:hover {
+  color: #fff;
+}
+
+.carrito-dropdown .btn-dark {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #262626;
+  --bs-btn-border-color: #262626;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #474747;
+  --bs-btn-hover-border-color: #3c3c3c;
+  color: var(--bs-btn-color);
+  background-color: var(--bs-btn-bg);
+  border-color: var(--bs-btn-border-color);
+}
+
+.carrito-dropdown .btn-dark:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+.carrito-dropdown .btn-danger {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #dc3545;
+  --bs-btn-border-color: #dc3545;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb2d3b;
+  --bs-btn-hover-border-color: #b02a37;
+  color: var(--bs-btn-color);
+  background-color: var(--bs-btn-bg);
+  border-color: var(--bs-btn-border-color);
+}
+
+.carrito-dropdown .btn-danger:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+/* Centrar imágenes verticalmente en las celdas */
+.carrito-dropdown td:first-child {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.carrito-dropdown td:first-child img,
+.carrito-dropdown td:first-child .ticket-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Centrar títulos "Nombre" y "Cantidad" más hacia la derecha */
+.carrito-dropdown .table th:nth-child(2) {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.carrito-dropdown .table th:nth-child(5) {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Alinear contenido de las celdas de nombre y cantidad */
+.carrito-dropdown .table td:nth-child(2) {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.carrito-dropdown .table td:nth-child(5) {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para botones de acción del carrito */
+.carrito-dropdown .btn-success {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #28a745;
+  --bs-btn-border-color: #28a745;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #218838;
+  --bs-btn-hover-border-color: #1e7e34;
+  color: var(--bs-btn-color);
+  background-color: var(--bs-btn-bg);
+  border-color: var(--bs-btn-border-color);
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.carrito-dropdown .btn-success:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+/* Asegurar que ambos botones estén centrados */
+.carrito-dropdown .btn.w-100 {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utilidades adicionales */
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+/* Profile dropdown styles */
+.profile-container {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 250px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.profile-dropdown img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.profile-dropdown h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.profile-dropdown p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}

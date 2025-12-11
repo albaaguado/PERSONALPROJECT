@@ -1,0 +1,98 @@
+.indice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+  transition: all 0.3s ease;
+}
+
+.indice.scrolled {
+  position: fixed;
+  top: 100px; /* Justo debajo del header normal */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 8px 0;
+  background-color: transparent;
+}
+
+/* Cuando el header también está scrolled, ajustar la posición */
+.indice.scrolled.header-scrolled {
+  top: 60px; /* Justo debajo del header scrolled */
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  transition: gap 0.3s ease;
+}
+
+.indice.scrolled .opciones {
+  gap: 30px;
+}
+
+.opcion {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid;
+  border-radius: 123px;
+  padding: 12px 28px;
+  background-color: var(--primario---blanco, white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.3s ease, gap 0.3s ease;
+}
+
+.indice.scrolled .opcion {
+  padding: 8px 20px;
+  gap: 12px;
+}
+
+.opcion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icono {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.indice.scrolled .icono {
+  width: 32px;
+  height: 32px;
+}
+
+/* Estilos para todos los SVGs de las opciones */
+.opcion-icon-svg {
+    /* Los iconos siguen ocupando un buen tamaño */
+    width: 32px; 
+    height: 32px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.indice.scrolled .opcion-icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+.texto-opcion {
+  /* Al no definir 'color' aquí, tomará el color que se define en el style inline de Indice.jsx. */
+  font-size: 24px;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  line-height: 24px;
+  transition: font-size 0.3s ease, line-height 0.3s ease;
+}
+
+.indice.scrolled .texto-opcion {
+  font-size: 18px;
+  line-height: 18px;
+}

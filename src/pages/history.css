@@ -1,0 +1,97 @@
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f5f5;
+  color: black;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+/* ==== CABECERA ==== */
+.history-header {
+  width: 100%;
+  background-color: #e6e6e6; /* fondo gris superior */
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 0px;
+}
+
+.history-title-top {
+  color: #b41f21;
+  font-size: 48px;
+  font-family: "Konkhmer Sleokchher";
+  line-height: 1;
+  margin: 0;
+}
+
+.history-title-bottom {
+  color: #b41f21;
+  font-size: 72px;
+  font-family: "Konkhmer Sleokchher";
+  margin: 0;
+}
+
+/* ==== CONTENEDOR PRINCIPAL (dos columnas) ==== */
+.history-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  gap: 60px;
+}
+
+/* ==== COLUMNA IZQUIERDA (TEXTOS) ==== */
+.texts-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.texts-section .texts-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 40px 60px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== COLUMNA DERECHA (TIMELINE) ==== */
+.timeline-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.timeline-section .timeline-wrapper {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ==== Responsive: apilar en pantallas pequeñas ==== */
+@media screen and (max-width: 1000px) {
+  .history-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .texts-section,
+  .timeline-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .texts-section .texts-container,
+  .timeline-section .timeline-wrapper {
+    max-width: 90%;
+  }
+}

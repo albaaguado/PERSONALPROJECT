@@ -1,0 +1,163 @@
+.calendar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.calendar-content {
+  width: 100%;
+  max-width: 460px;
+  background: transparent;
+  border-radius: 20px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* outer rounded dark panel like the screenshot */
+.calendar-wrap {
+  background: #666666;
+  border-radius: 18px;
+  padding: 18px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Hide default calendar navigation and style the months */
+.custom-react-calendar {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Remove react-calendar default border */
+.custom-react-calendar button:enabled {
+  cursor: pointer;
+}
+
+/* Month headers large and bold */
+.custom-react-calendar .react-calendar__month-view__weekdays {
+  margin-bottom: 8px;
+}
+.custom-react-calendar .react-calendar__month-view__weekdays__weekday {
+  color: #dcdcdc;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 0;
+  width: 48px;
+  text-align: center;
+}
+
+/* Month title */
+.custom-react-calendar .react-calendar__month-view__header {
+  margin-bottom: 12px;
+  display: none;
+}
+
+/* Render custom current month titles: use the built .react-calendar__navigation label */
+.custom-react-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+/* Single month layout */
+.custom-react-calendar .react-calendar__viewContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-react-calendar .react-calendar__month-view {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4px;
+  border-right: none;
+  margin-right: 0;
+}
+
+/* Days grid */
+.custom-react-calendar .react-calendar__month-view__days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+/* Tile base */
+.custom-react-calendar .react-calendar__tile {
+  background: transparent;
+  color: #fff;
+  width: 48px;
+  height: 56px;
+  line-height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 6px;
+  border-radius: 8px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* dim outside month days */
+.custom-react-calendar .react-calendar__tile.react-calendar__month-view__days__day--neighboringMonth {
+  opacity: 0.28;
+}
+
+/* keep default day number styling but bold */
+.custom-react-calendar .react-calendar__tile abbr {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Selected day */
+.custom-react-calendar .react-calendar__tile--active,
+.custom-react-calendar .react-calendar__tile--now {
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+
+/* Actions */
+.calendar-actions {
+  display:flex;
+  gap:12px;
+  justify-content:flex-end;
+}
+
+.calendar-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.calendar-btn.primary { background: #111; color: #fff; }
+.calendar-btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.12); color: #fff; }
+
+/* Responsive tweaks */
+@media (max-width: 760px) {
+  .calendar-content { padding: 12px; }
+  .calendar-wrap { padding: 12px; border-radius: 12px; }
+  .custom-react-calendar .react-calendar__month-view { width: 100%; display: block; }
+  .custom-react-calendar .react-calendar__month-view:not(:last-child) { border-right: none; margin-right: 0; padding-right: 0; }
+  .custom-react-calendar .react-calendar__tile { width: 40px; height: 48px; margin: 4px; }
+}

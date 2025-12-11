@@ -1,0 +1,79 @@
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Esto crea 6 columnas iguales */
+  gap: 30px;
+  justify-items: center;
+
+  /* AJUSTE CLAVE 1: Usar el 100% del contenedor para evitar el desbordamiento lateral */
+  width: 100%; 
+  max-width: 1200px; /* Opcional: Limita el ancho máximo en pantallas muy grandes */
+  margin: 0 auto; 
+  margin-bottom: 80px;
+  padding: 0 20px; /* Añadir un poco de espacio a los lados en pantallas pequeñas */
+}
+
+/* NUEVA REGLA: Elimina el subrayado de los enlaces de los artículos */
+.article-link {
+    text-decoration: none; /* Esto quita el subrayado */
+    color: inherit; /* Asegura que el color del texto se herede (normalmente negro) */
+}
+
+
+.article-card {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido (imagen, nombre, precio) horizontalmente */
+}
+
+/* 1. Contenedor para la imagen que fija la altura para evitar que se desescuadre */
+.article-img-container {
+    width: 100%;
+    /* Define la proporción: 4 unidades de ancho por 5 unidades de alto. */
+    aspect-ratio: 4 / 5; 
+    overflow: hidden; /* Oculta partes de la imagen si son demasiado grandes */
+    margin-bottom: 5px; /* Pequeño espacio entre imagen y título */
+}
+
+/* Estilos para la imagen dentro de su contenedor - Esto asegura que no sea demasiado grande */
+.article-img {
+  width: 100%;
+  height: 100%;
+    /* CLAVE: Asegura que la imagen cubra todo el contenedor sin estirarse, cortando los bordes si es necesario. */
+    object-fit: contain; 
+}
+
+.article-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-family: 'Konkhmer Sleokchher';
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word;
+  margin-top: 5px;
+  
+  /* AJUSTE CLAVE 2: Elimina el forzado a una línea, permitiendo salto de línea */
+  /* white-space: nowrap; <--- ELIMINADO */
+  /* overflow: hidden; <--- ELIMINADO */
+  /* text-overflow: ellipsis; <--- ELIMINADO */
+  width: 100%; /* Asegura que la regla white-space/overflow se aplique */
+  min-height: 40px; /* Aumentado a 40px para dar espacio a DOS líneas de texto y alinear precios */
+}
+
+.article-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  font-family: 'Great Vibes';
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}

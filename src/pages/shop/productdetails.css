@@ -1,0 +1,247 @@
+.product-detail-page {
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 20px 0;
+    min-height: 70vh; /* Asegura que no sea demasiado corto */
+}
+
+/* Breadcrumb */
+.product-breadcrumb {
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+/* Contenido Principal (Imagen + Info) */
+.product-content {
+    display: flex;
+    gap: 80px;
+    /* Asegura un buen layout en móviles */
+    flex-direction: row; 
+}
+
+/* Área de la Imagen (Izquierda) */
+.product-image-area {
+    width: 40%; 
+    min-width: 300px;
+    background-color: #f0f0f0;
+    aspect-ratio: 4 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    /* Estilo del rectángulo de la izquierda */
+}
+
+.product-detail-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Área de Información (Derecha) */
+.product-info-area {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px; /* Alineación visual con la imagen */
+}
+
+.product-detail-name {
+    font-size: 36px;
+    font-family: 'Konkhmer Sleokchher', serif;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.product-detail-price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #444; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-detail-desc-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.product-detail-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Selección de Talla */
+.product-size-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-size-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.size-button {
+    /* [MODIFICADO] Color de fondo y borde inicial */
+    background-color: #E3E3E3; 
+    color: #333;
+    border: none; /* Quitamos el borde para un look más limpio */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 60px;
+    transition: background-color 0.15s, color 0.15s; /* Suaviza la transición */
+}
+
+.size-button:hover {
+    /* [MODIFICADO] Mantener el mismo color de fondo en hover si no está activo */
+    background-color: #d8d8d8; 
+}
+
+.size-button.active-size {
+    /* [MODIFICADO] Estado activo: fondo oscuro, texto blanco */
+    background-color: #3F3F3F; 
+    color: white;
+}
+
+/* Botones de Acción */
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.add-to-cart-button{
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-to-cart-button {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+}
+
+
+
+.add-to-cart-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Popup de Error */
+.error-popup-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    padding: 24px;
+}
+
+.error-popup-content {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    animation: popupSlideIn 0.3s ease-out;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.error-popup-icon {
+    font-size: 32px;
+}
+
+.error-popup-close {
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+    line-height: 1;
+}
+
+.error-popup-close:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.error-popup-message {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .product-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .product-image-area,
+    .product-info-area {
+        width: 100%;
+        min-width: unset;
+    }
+    .product-detail-name {
+        font-size: 28px;
+    }
+    
+    .error-popup-content {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .error-popup-message {
+        font-size: 16px;
+    }
+}
