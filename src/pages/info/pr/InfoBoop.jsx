@@ -4,9 +4,7 @@ import SeatingChartModal from "../../../components/SeatingChartModal";
 import "../info_shared.css"; // desde .../info/chr => ../info_shared.css
 
 // Ejemplo de ruta si tu imagen está en src/img/musicales/portadas/
-import image from "../../../img/musicales/fotos 'actuaciones'/justintime.jpg";
-
-const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
+import image from "../../../img/musicales/fotos 'actuaciones'/boop.webp";
 
 // --- ICON COMPONENTS (SVG provided by user) ---
 // Se mantienen los atributos width y height para asegurar el tamaño correcto.
@@ -44,8 +42,8 @@ const MapPinIcon = (props) => (
 
 const TABS = ['About'];
 
-// Main Component is now named InfoLesMiserables
-const   Info_Justintime = () => {
+// Main Component is now named InfoBoop
+const InfoBoop = () => {
     const [activeTab, setActiveTab] = useState('About');
 
     const TabItem = ({ name }) => (
@@ -102,7 +100,7 @@ const   Info_Justintime = () => {
                   selectedDate={selectedDate}
                   onClose={closeSeating}
                   onConfirm={confirmSeats}
-                  musicalName="Just in time"
+                  musicalName="Boop"
                 />
             </>
         );
@@ -130,18 +128,18 @@ const   Info_Justintime = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.0</span>
+                            <span>4.3</span>
                         </div>
 
                         {/* Title */}
                         <h1 className="title">
-                            Just in time
+                            Boop
                         </h1>
 
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Broadway Theatre</span>
+                            <span>Palace Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -158,7 +156,7 @@ const   Info_Justintime = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Duration</span>
-                                <span className="value">2h 10min</span>
+                                <span className="value">2h 15min</span>
                             </div>
                         </div>
 
@@ -169,7 +167,7 @@ const   Info_Justintime = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Age Limit</span>
-                                <span className="value">Suitable for 10+</span>
+                                <span className="value">Suitable for 7+</span>
                             </div>
                         </div>
                     </div>
@@ -185,7 +183,7 @@ const   Info_Justintime = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                            Just in Time is a contemporary musical centered on themes of timing, fate, and second chances. It follows intersecting lives brought together by unexpected moments, using an original score and a romantic narrative to explore how small decisions can change the course of a lifetime.                            </p>
+                            Boop! The Musical is inspired by the classic cartoon character Betty Boop and premiered in the early 2020s. With a retro aesthetic and contemporary themes, the musical follows Betty as she navigates fame, identity, and independence, blending nostalgia with a modern message about self-discovery and empowerment.                            </p>
                             
                         </div>
 
@@ -200,4 +198,4 @@ const   Info_Justintime = () => {
     );
 }
 
-export default   Info_Justintime;
+export default InfoBoop;

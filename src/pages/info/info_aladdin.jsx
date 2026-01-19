@@ -6,7 +6,6 @@ import "./info_shared.css";
 // URL de la imagen del póster proporcionada por el usuario
 import image from "../../img/musicales/fotos 'actuaciones'/aladdin.jpg"
 
-const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
 
 // --- ICON COMPONENTS (SVG provided by user) ---
 // Se mantienen los atributos width y height para asegurar el tamaño correcto.

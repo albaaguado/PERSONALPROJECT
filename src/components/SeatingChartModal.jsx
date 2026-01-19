@@ -148,7 +148,30 @@ export default function SeatingChartModal({ open, selectedDate, onClose, onConfi
 
   // Calcular asientos en carrito
   const seatsInCart = React.useMemo(() => {
-    return getSeatsInCart();
+    const seatsInCartSet = new Set();
+    
+    cart.forEach(item => {
+      // Verificar si es un ticket del mismo musical y fecha
+      if (item.type === 'ticket' && 
+          item.tag === musicalName && 
+          item.date === selectedDate &&
+          item.seats) {
+        // Agregar cada asiento al Set usando su ID
+        item.seats.forEach(seatInfo => {
+          // Buscar el ID del asiento basado en row y number
+          const seatId = seats.find(s => 
+            s.row === seatInfo.row && 
+            s.number === seatInfo.number &&
+            s.section === seatInfo.section
+          )?.id;
+          if (seatId) {
+            seatsInCartSet.add(seatId);
+          }
+        });
+      }
+    });
+    
+    return seatsInCartSet;
   }, [cart, musicalName, selectedDate, seats]);
 
   // Calcular asientos ocupados de BD

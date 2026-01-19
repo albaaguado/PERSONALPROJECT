@@ -6,8 +6,6 @@ import "../info_shared.css"; // desde .../info/chr => ../info_shared.css
 // Ejemplo de ruta si tu imagen está en src/img/musicales/portadas/
 import image from "../../../img/musicales/fotos 'actuaciones'/whitechristmas.jpg";
 
-const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
-
 // --- ICON COMPONENTS (SVG provided by user) ---
 // Se mantienen los atributos width y height para asegurar el tamaño correcto.
 
@@ -44,8 +42,8 @@ const MapPinIcon = (props) => (
 
 const TABS = ['About'];
 
-// Main Component is now named InfoLesMiserables
-const   Info_Whitechristmas = () => {
+// Main Component is now named InfoWhiteChristmas
+const InfoWhiteChristmas = () => {
     const [activeTab, setActiveTab] = useState('About');
 
     const TabItem = ({ name }) => (
@@ -200,4 +198,4 @@ const   Info_Whitechristmas = () => {
     );
 }
 
-export default   Info_Whitechristmas;
+export default InfoWhiteChristmas;

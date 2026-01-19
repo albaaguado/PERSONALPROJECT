@@ -6,8 +6,6 @@ import "../info_shared.css"; // desde .../info/chr => ../info_shared.css
 // Ejemplo de ruta si tu imagen está en src/img/musicales/portadas/
 import image from "../../../img/musicales/fotos 'actuaciones'/christmascarol.jpg";
 
-const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
-
 // --- ICON COMPONENTS (SVG provided by user) ---
 // Se mantienen los atributos width y height para asegurar el tamaño correcto.
 

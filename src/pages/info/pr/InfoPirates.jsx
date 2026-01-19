@@ -4,9 +4,7 @@ import SeatingChartModal from "../../../components/SeatingChartModal";
 import "../info_shared.css"; // desde .../info/chr => ../info_shared.css
 
 // Ejemplo de ruta si tu imagen está en src/img/musicales/portadas/
-import image from "../../../img/musicales/fotos 'actuaciones'/boop.webp";
-
-const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
+import image from "../../../img/musicales/fotos 'actuaciones'/pirates.webp";
 
 // --- ICON COMPONENTS (SVG provided by user) ---
 // Se mantienen los atributos width y height para asegurar el tamaño correcto.
@@ -44,8 +42,8 @@ const MapPinIcon = (props) => (
 
 const TABS = ['About'];
 
-// Main Component is now named InfoLesMiserables
-const   Info_boop = () => {
+// Main Component is now named InfoPirates
+const InfoPirates = () => {
     const [activeTab, setActiveTab] = useState('About');
 
     const TabItem = ({ name }) => (
@@ -102,7 +100,7 @@ const   Info_boop = () => {
                   selectedDate={selectedDate}
                   onClose={closeSeating}
                   onConfirm={confirmSeats}
-                  musicalName="Boop"
+                  musicalName="Pirates of Penzane"
                 />
             </>
         );
@@ -130,18 +128,18 @@ const   Info_boop = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.3</span>
+                            <span>4.5</span>
                         </div>
 
                         {/* Title */}
                         <h1 className="title">
-                            Boop
+                            Pirates of Penzane
                         </h1>
 
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Palace Theatre</span>
+                            <span>Savoy Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -158,7 +156,7 @@ const   Info_boop = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Duration</span>
-                                <span className="value">2h 15min</span>
+                                <span className="value">2h</span>
                             </div>
                         </div>
 
@@ -185,7 +183,7 @@ const   Info_boop = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                            Boop! The Musical is inspired by the classic cartoon character Betty Boop and premiered in the early 2020s. With a retro aesthetic and contemporary themes, the musical follows Betty as she navigates fame, identity, and independence, blending nostalgia with a modern message about self-discovery and empowerment.                            </p>
+                            The Pirates of Penzance premiered in 1879 and was composed by Arthur Sullivan with a libretto by W. S. Gilbert. This comic opera satirizes duty, honor, and romance through the misadventures of a young pirate apprentice, featuring witty dialogue, memorable melodies, and absurd humor.                            </p>
                             
                         </div>
 
@@ -200,4 +198,4 @@ const   Info_boop = () => {
     );
 }
 
-export default   Info_boop;
+export default InfoPirates;

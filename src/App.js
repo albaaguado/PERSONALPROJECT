@@ -34,9 +34,9 @@ import InfoHoliday from "./pages/info/chr/info_holidayinn";
 import InfoWhiteChristmas from "./pages/info/chr/info_whitechristmas";
 
 // ESTRENOS
-import Info_boop from "./pages/info/pr/info_boop";
-import Info_Justintime from "./pages/info/pr/info_justintime"; 
-import Info_Pirates from "./pages/info/pr/info_pirates";
+import InfoBoop from "./pages/info/pr/InfoBoop";
+import InfoJustInTime from "./pages/info/pr/InfoJustInTime"; 
+import InfoPirates from "./pages/info/pr/InfoPirates";
 import Info5Years from "./pages/info/pr/Info5Years";
 import InfoQueen from "./pages/info/pr/InfoQueen"; 
 
@@ -80,9 +80,9 @@ function App() {
         <Route path="/info/chr/info_elf" element={<InfoElf />} />
         <Route path="/info/chr/info_holidayinn" element={<InfoHoliday />} />
         <Route path="/info/chr/info_whitechristmas" element={<InfoWhiteChristmas />} />
-        <Route path="/info/pr/info_boop" element={<Info_boop />} />
-        <Route path="/info/pr/info_justintime" element={<Info_Justintime />} />
-        <Route path="/info/pr/info_pirates" element={<Info_Pirates />} />
+        <Route path="/info/pr/info_boop" element={<InfoBoop />} />
+        <Route path="/info/pr/info_justintime" element={<InfoJustInTime />} />
+        <Route path="/info/pr/info_pirates" element={<InfoPirates />} />
         <Route path="/info/pr/info_5years" element={<Info5Years />} />
         <Route path="/info/pr/info_queen" element={<InfoQueen />} />
         <Route path="/history" element={<History />} />
