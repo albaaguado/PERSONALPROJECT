@@ -118,8 +118,8 @@ const InfoLionKing = () => {
                     {/* Cover Image */}
                     <img 
                         className="poster-image" 
-                        src= { image}
-                        alt="Les  image Poster"
+                        src={image}
+                        alt="The Lion King poster"
                         // Fallback to a plain dark background if the image fails to load
                         onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/147x232/222/FFFFFF?text=Poster+No+Cargado"; }}
                     />

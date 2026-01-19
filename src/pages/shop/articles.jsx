@@ -1,14 +1,11 @@
 import "./articles.css";
-import { useState } from "react";
 import ProductCard from "./productcard";
 import { PRODUCTS_DB } from "../../data/bd_articles.js";
 
 export default function Articles({ activeTag }) {
-    const [data, setData] = useState(PRODUCTS_DB);
-
     const filteredProducts = activeTag
-        ? data.filter(p => p.tag === activeTag)
-        : data;
+        ? PRODUCTS_DB.filter(p => p.tag === activeTag)
+        : PRODUCTS_DB;
 
     const displayedProducts = filteredProducts.filter(Boolean);
 

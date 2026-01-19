@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "./shop.css";
 import Articles from "./shop/articles";
-import { useCart } from "../context/CartContext";
 
 export default function Shop() {
   const [activeTag, setActiveTag] = useState(null);
-  const { addToCart } = useCart();
 
   // Lista de botones del índice
   const musicalTitles = ["Lion King", "Wicked", "Aladdin", "West Side Story", "Les Misérables"];
