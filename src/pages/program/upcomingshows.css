@@ -73,3 +73,92 @@
   color: inherit;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .showsGrid {
+    max-width: calc(4 * 239px + 3 * 44px);
+  }
+
+  .upcomingShowsTitle {
+    max-width: calc(4 * 239px + 3 * 44px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .upcomingShowsContainer {
+    padding: 60px 15px;
+  }
+
+  .showsGrid {
+    gap: 30px;
+    max-width: calc(3 * 239px + 2 * 44px);
+  }
+
+  .upcomingShowsTitle {
+    font-size: 40px;
+    max-width: calc(3 * 239px + 2 * 44px);
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .upcomingShowsContainer {
+    padding: 40px 15px;
+  }
+
+  .upcomingShowsTitle {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 30px;
+  }
+
+  .showsGrid {
+    gap: 25px;
+    max-width: 100%;
+  }
+
+  .showCard {
+    width: 200px;
+  }
+
+  .showImage {
+    height: 300px;
+  }
+
+  .showTitle,
+  .showPrice {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upcomingShowsContainer {
+    padding: 30px 10px;
+  }
+
+  .upcomingShowsTitle {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 25px;
+  }
+
+  .showsGrid {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showCard {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .showImage {
+    height: 400px;
+  }
+
+  .showTitle,
+  .showPrice {
+    font-size: 16px;
+  }
+}

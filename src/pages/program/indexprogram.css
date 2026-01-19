@@ -71,3 +71,46 @@
 .upcoming-soon .card-text {
   color: var(--musical---reyleon---live, #C1121F);
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .index-section {
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .card {
+    width: 180px;
+    height: 60px;
+    padding: 0 12px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+  }
+
+  .card-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .index-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+    height: 55px;
+  }
+
+  .card-text {
+    font-size: 18px;
+  }
+}

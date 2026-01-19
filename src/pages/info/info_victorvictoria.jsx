@@ -4,7 +4,7 @@ import SeatingChartModal from "../../components/SeatingChartModal";
 import "./info_shared.css";
 
 // URL de la imagen del póster proporcionada por el usuario
-import miserables from "../../img/musicales/fotos 'actuaciones'/victorvictoria.jpg"
+import victorvictoria from "../../img/musicales/fotos 'actuaciones'/victorvictoria.jpg"
 
 const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
 
@@ -42,7 +42,7 @@ const MapPinIcon = (props) => (
 );
 
 
-const TABS = ['About', 'Venue', 'Tickets', 'Reviews'];
+const TABS = ['About'];
 
 // Main Component is now named InfoLesMiserables
 const InfoVictor = () => {
@@ -118,8 +118,8 @@ const InfoVictor = () => {
                     {/* Cover Image */}
                     <img 
                         className="poster-image" 
-                        src= {miserables}
-                        alt="Les Miserables Poster"
+                        src= {victorvictoria}
+                        alt="Victor o Victoria Poster"
                         // Fallback to a plain dark background if the image fails to load
                         onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/147x232/222/FFFFFF?text=Poster+No+Cargado"; }}
                     />
@@ -130,7 +130,7 @@ const InfoVictor = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.6</span>
+                            <span>4.2</span>
                         </div>
 
                         {/* Title */}
@@ -141,7 +141,7 @@ const InfoVictor = () => {
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Teatro Blablabla</span>
+                            <span>Broadway Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -169,7 +169,7 @@ const InfoVictor = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Age Limit</span>
-                                <span className="value">Suitable for 6+</span>
+                                <span className="value">Suitable for 12+</span>
                             </div>
                         </div>
                     </div>
@@ -185,17 +185,8 @@ const InfoVictor = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur. Nam porttitor blandit est, dui magnis habitasse eros felis elementum ultrices. Pellentesque sit amet erat justo. Bibendum morbi malesuada convallis dictum semper erat, ultrices placerat pretium blandit ligula elementum, sagittis ultrices rhoncus, porttitor nec, nam, morbi viverra. Curabitur vel ornare turpis. Cras nullam vel fringilla nullam quisque, lacus nulla lacus.
-                            </p>
-                            <p>
-                                Dui magnis habitasse eros felis elementum ultrices habitant penatibus posuere, commodo euismod leo mauris massa ad dignissim vivamus. Consequat at lacus suscipit placerat in cum pharetra hendrerit, eget. Commodo leo mauris massa ad dignissim vivamus.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in, lacus suscipit lacus ad nibh condimentum nostra volutpat diam.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in.
-                            </p>
+                                Victor/Victoria opened on Broadway in 1995 with music by Henry Mancini and lyrics by Leslie Bricusse, based on the 1982 film starring Julie Andrews. Set in 1930s Paris, the story follows Victoria Grant, a struggling singer who disguises herself as a man performing as a female impersonator in order to find success, leading to comedic misunderstandings and reflections on identity, gender roles, and love. Julie Andrews and later Liza Minnelli became iconic performers associated with the role.                            </p>
+                           
                         </div>
 
                         {/* --- PRICE & BUTTON (Sidebar) --- */}

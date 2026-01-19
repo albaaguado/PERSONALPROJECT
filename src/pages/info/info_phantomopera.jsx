@@ -42,7 +42,7 @@ const MapPinIcon = (props) => (
 );
 
 
-const TABS = ['About', 'Venue', 'Tickets', 'Reviews'];
+const TABS = ['About'];
 
 // Main Component is now named InfoLesMiserables
 const InfoPhantom = () => {
@@ -130,7 +130,7 @@ const InfoPhantom = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.6</span>
+                            <span>4.9</span>
                         </div>
 
                         {/* Title */}
@@ -141,7 +141,7 @@ const InfoPhantom = () => {
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Teatro Blablabla</span>
+                            <span>Majestic Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -169,7 +169,7 @@ const InfoPhantom = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Age Limit</span>
-                                <span className="value">Suitable for 6+</span>
+                                <span className="value">Suitable for 10+</span>
                             </div>
                         </div>
                     </div>
@@ -185,16 +185,7 @@ const InfoPhantom = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur. Nam porttitor blandit est, dui magnis habitasse eros felis elementum ultrices. Pellentesque sit amet erat justo. Bibendum morbi malesuada convallis dictum semper erat, ultrices placerat pretium blandit ligula elementum, sagittis ultrices rhoncus, porttitor nec, nam, morbi viverra. Curabitur vel ornare turpis. Cras nullam vel fringilla nullam quisque, lacus nulla lacus.
-                            </p>
-                            <p>
-                                Dui magnis habitasse eros felis elementum ultrices habitant penatibus posuere, commodo euismod leo mauris massa ad dignissim vivamus. Consequat at lacus suscipit placerat in cum pharetra hendrerit, eget. Commodo leo mauris massa ad dignissim vivamus.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in, lacus suscipit lacus ad nibh condimentum nostra volutpat diam.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in.
+                            Premiering in London in 1986, The Phantom of the Opera was composed by Andrew Lloyd Webber and is based on the novel by Gaston Leroux. Originally starring Michael Crawford and Sarah Brightman, the musical tells the story of a mysterious, disfigured musical genius who lives beneath the Paris Opera House and becomes obsessed with the young soprano Christine Daaé, blending romance, obsession, and tragedy in one of the most successful musicals in history.
                             </p>
                         </div>
 

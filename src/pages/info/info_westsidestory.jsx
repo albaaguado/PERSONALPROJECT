@@ -42,7 +42,7 @@ const MapPinIcon = (props) => (
 );
 
 
-const TABS = ['About', 'Venue', 'Tickets', 'Reviews'];
+const TABS = ['About'];
 
 // Main Component is now named InfoLes image
 const InfoWss = () => {
@@ -131,7 +131,7 @@ const InfoWss = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.6</span>
+                            <span>4.8</span>
                         </div>
 
                         {/* Title */}
@@ -142,7 +142,7 @@ const InfoWss = () => {
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Teatro Blablabla</span>
+                            <span>Broadway Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -159,7 +159,7 @@ const InfoWss = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Duration</span>
-                                <span className="value">2h 30min</span>
+                                <span className="value">2h 35min</span>
                             </div>
                         </div>
 
@@ -170,7 +170,7 @@ const InfoWss = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Age Limit</span>
-                                <span className="value">Suitable for 6+</span>
+                                <span className="value">Suitable for 10+</span>
                             </div>
                         </div>
                     </div>
@@ -186,17 +186,8 @@ const InfoWss = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur. Nam porttitor blandit est, dui magnis habitasse eros felis elementum ultrices. Pellentesque sit amet erat justo. Bibendum morbi malesuada convallis dictum semper erat, ultrices placerat pretium blandit ligula elementum, sagittis ultrices rhoncus, porttitor nec, nam, morbi viverra. Curabitur vel ornare turpis. Cras nullam vel fringilla nullam quisque, lacus nulla lacus.
-                            </p>
-                            <p>
-                                Dui magnis habitasse eros felis elementum ultrices habitant penatibus posuere, commodo euismod leo mauris massa ad dignissim vivamus. Consequat at lacus suscipit placerat in cum pharetra hendrerit, eget. Commodo leo mauris massa ad dignissim vivamus.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in, lacus suscipit lacus ad nibh condimentum nostra volutpat diam.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in.
-                            </p>
+                            West Side Story premiered in 1957, with music by Leonard Bernstein, lyrics by Stephen Sondheim, and a book by Arthur Laurents. Inspired by Shakespeare’s Romeo and Juliet, the musical is set in 1950s New York and tells the tragic love story between Tony and Maria, members of rival street gangs, addressing themes of immigration, racism, violence, and forbidden love. It has been adapted into films in 1961 and 2021.                            </p>
+                           
                         </div>
 
                         {/* --- PRICE & BUTTON (Sidebar) --- */}

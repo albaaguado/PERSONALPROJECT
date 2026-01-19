@@ -12,6 +12,7 @@ function Header() {
   const [showProfile, setShowProfile] = useState(false);
   const profileRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -66,10 +67,23 @@ function Header() {
         alt="Logo"
       />
 
-      <nav className="nav-menu">
+      <button 
+        className="mobile-menu-toggle"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav className={`nav-menu ${isMobileMenuOpen ? "mobile-open" : ""}`}>
         <Link
           to="/"
           className={`nav-item ${location.pathname === "/" ? "active" : ""}`}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           Home
         </Link>
@@ -77,15 +91,16 @@ function Header() {
         <Link
           to="/program"
           className={`nav-item ${location.pathname === "/program" ? "active" : ""}`}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           Programming
         </Link>
 
-        <button className="nav-item">Tickets</button>
 
         <Link
           to="/history"
           className={`nav-item ${location.pathname === "/history" ? "active" : ""}`}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           History
         </Link>
@@ -93,6 +108,7 @@ function Header() {
         <Link
           to="/shop"
           className={`nav-item ${location.pathname === "/shop" ? "active" : ""}`}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           Shop
         </Link>

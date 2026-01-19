@@ -38,3 +38,51 @@
   font-size: 1rem;
   color: #fff;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .title-background {
+    height: 200px;
+  }
+
+  .main-title,
+  .subtitle {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-background {
+    height: 160px;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .main-title,
+  .subtitle {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-background {
+    height: 140px;
+    padding: 0 15px;
+  }
+
+  .main-title,
+  .subtitle {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}

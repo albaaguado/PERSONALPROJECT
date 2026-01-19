@@ -82,6 +82,7 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    padding: 40px 20px;
   }
 
   .texts-section,
@@ -93,5 +94,53 @@
   .texts-section .texts-container,
   .timeline-section .timeline-wrapper {
     max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .history-header {
+    padding: 20px 0;
+  }
+
+  .history-title-top {
+    font-size: 36px;
+  }
+
+  .history-title-bottom {
+    font-size: 54px;
+  }
+
+  .history-content {
+    padding: 30px 15px;
+    gap: 30px;
+  }
+
+  .texts-section .texts-container {
+    padding: 30px 40px;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .history-header {
+    padding: 15px 0;
+  }
+
+  .history-title-top {
+    font-size: 28px;
+  }
+
+  .history-title-bottom {
+    font-size: 42px;
+  }
+
+  .history-content {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .texts-section .texts-container {
+    padding: 20px 25px;
+    border-radius: 12px;
   }
 }

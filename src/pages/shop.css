@@ -94,3 +94,107 @@
     color: var(--indice---live, #B13A2C); /* El mismo color que el hover, o usa un color distinto */
     font-weight: bold;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .shop-header {
+    height: 140px;
+  }
+
+  .shop-header-bg {
+    height: 140px;
+  }
+
+  .shop-title {
+    font-size: 60px;
+    line-height: 80px;
+    top: 8px;
+  }
+
+  .shop-subtitle {
+    font-size: 22px;
+    top: 100px;
+    width: 380px;
+  }
+
+  .shop-index {
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .shop-index-button {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shop-header {
+    height: 120px;
+  }
+
+  .shop-header-bg {
+    height: 120px;
+  }
+
+  .shop-title {
+    font-size: 48px;
+    line-height: 64px;
+    width: 400px;
+    top: 6px;
+  }
+
+  .shop-subtitle {
+    font-size: 20px;
+    top: 85px;
+    width: 320px;
+  }
+
+  .shop-index {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+
+  .shop-index-button {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shop-header {
+    height: 100px;
+    margin-top: 10px;
+  }
+
+  .shop-header-bg {
+    height: 100px;
+  }
+
+  .shop-title {
+    font-size: 36px;
+    line-height: 48px;
+    width: 90%;
+    max-width: 320px;
+    top: 5px;
+    letter-spacing: 2px;
+  }
+
+  .shop-subtitle {
+    font-size: 18px;
+    top: 70px;
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .shop-index {
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  .shop-index-button {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}

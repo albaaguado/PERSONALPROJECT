@@ -7,3 +7,18 @@
   padding-top: 120px; /* separa del navbar */
   padding-bottom: 60px;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home-container {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+}

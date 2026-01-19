@@ -15,56 +15,56 @@ export default function Timeline() {
     {
       year: "1866",
       title: "The Black Crook",
-      description: "Considerado el primer musical moderno.",
+      description: "Considered the first modern musical.",
       img: blackCrook,
       side: "left"
     },
     {
       year: "1943",
       title: "Oklahoma!",
-      description: "Música, historia y danza unidas por primera vez.",
+      description: "Music, history and dance united for the first time.",
       img: oklahoma,
       side: "right"
     },
     {
       year: "1957",
       title: "West Side Story",
-      description: "Coreografías modernas y trama mágica.",
+      description: "Modern choreography and magical plot.",
       img: westside,
       side: "left"
     },
     {
       year: "1980",
       title: "Les Misérables",
-      description: "Éxito mundial basado en la novela de Victor Hugo.",
+      description: "Worldwide success based on Victor Hugo's novel.",
       img: miserables,
       side: "right"
     },
     {
       year: "1986",
       title: "Phantom of the Opera",
-      description: "Musical más longevo de Broadway.",
+      description: "Longest-running musical on Broadway.",
       img: phantom,
       side: "left"
     },
     {
       year: "1994",
       title: "The Lion King",
-      description: "Adaptación teatral de Disney muy innovadora.",
+      description: "Very innovative Disney theatrical adaptation.",
       img: lionking,
       side: "right"
     },
     {
       year: "2003",
       title: "Wicked",
-      description: "Reinterpretación del Mago de Oz (mucho éxito).",
+      description: "Reinterpretation of The Wizard of Oz (great success).",
       img: wicked,
       side: "left"
     },
     {
       year: "2015",
       title: "Hamilton",
-      description: "Revolucionó el género. Mezcla historia, rap y hiphop.",
+      description: "Revolutionized the genre. Mixes history, rap and hip-hop.",
       img: hamilton,
       side: "right"
     }

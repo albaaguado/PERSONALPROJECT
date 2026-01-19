@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./footer.css";
 import FooterModal from "./FooterModal";
 import logo from '../img/logo/logo_letrasblancas_sinfondo.png';
+import broadway from '../img/collaborators/broadway.jpg';
+import concord from '../img/collaborators/concord.webp';
+import disney from '../img/collaborators/disney.svg';
+import mti from '../img/collaborators/music theatre international.png';
 
 function Footer() {
   const [openModal, setOpenModal] = useState(null);
@@ -237,6 +241,28 @@ function Footer() {
 
         <div className="footer-section">
           <h3>COLLABORATORS</h3>
+          <div className="collaborators-logos">
+            <img
+              src={broadway}
+              alt="Broadway"
+              className="collaborator-logo"
+            />
+            <img
+              src={concord}
+              alt="Concord"
+              className="collaborator-logo"
+            />
+            <img
+              src={disney}
+              alt="Disney"
+              className="collaborator-logo"
+            />
+            <img
+              src={mti}
+              alt="Music Theatre International"
+              className="collaborator-logo"
+            />
+          </div>
         </div>
       </footer>
 

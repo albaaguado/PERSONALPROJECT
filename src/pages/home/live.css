@@ -76,7 +76,32 @@
 }
 
 /* ==== Responsive ==== */
-@media (max-width: 900px) {
+@media screen and (max-width: 1024px) {
+  .live-section {
+    margin: 30px auto;
+  }
+
+  .live-overlay {
+    padding: 60px 70px;
+  }
+
+  .see-it,
+  .this-week {
+    font-size: 32px;
+  }
+
+  .live-badge {
+    font-size: 32px;
+    padding: 6px 35px;
+  }
+
+  .buy-btn {
+    font-size: 26px;
+    padding: 12px 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .live-overlay {
     flex-direction: column;
     justify-content: center;
@@ -88,5 +113,56 @@
 
   .buy-btn {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .live-section {
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+
+  .live-overlay {
+    padding: 30px 25px;
+    gap: 25px;
+  }
+
+  .see-it,
+  .this-week {
+    font-size: 28px;
+  }
+
+  .live-badge {
+    font-size: 28px;
+    padding: 6px 30px;
+  }
+
+  .buy-btn {
+    font-size: 22px;
+    padding: 10px 35px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .live-overlay {
+    padding: 25px 20px;
+    gap: 20px;
+  }
+
+  .see-it,
+  .this-week {
+    font-size: 24px;
+  }
+
+  .live-badge {
+    font-size: 24px;
+    padding: 5px 25px;
+  }
+
+  .buy-btn {
+    font-size: 20px;
+    padding: 10px 30px;
   }
 }

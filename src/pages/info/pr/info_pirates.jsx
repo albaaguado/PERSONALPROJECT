@@ -42,7 +42,7 @@ const MapPinIcon = (props) => (
 );
 
 
-const TABS = ['About', 'Venue', 'Tickets', 'Reviews'];
+const TABS = ['About'];
 
 // Main Component is now named InfoLesMiserables
 const   Info_Pirates = () => {
@@ -130,7 +130,7 @@ const   Info_Pirates = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.6</span>
+                            <span>4.5</span>
                         </div>
 
                         {/* Title */}
@@ -141,7 +141,7 @@ const   Info_Pirates = () => {
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Teatro Blablabla</span>
+                            <span>Savoy Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -158,7 +158,7 @@ const   Info_Pirates = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Duration</span>
-                                <span className="value">2h 30min</span>
+                                <span className="value">2h</span>
                             </div>
                         </div>
 
@@ -169,7 +169,7 @@ const   Info_Pirates = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Age Limit</span>
-                                <span className="value">Suitable for 6+</span>
+                                <span className="value">Suitable for 7+</span>
                             </div>
                         </div>
                     </div>
@@ -185,17 +185,8 @@ const   Info_Pirates = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur. Nam porttitor blandit est, dui magnis habitasse eros felis elementum ultrices. Pellentesque sit amet erat justo. Bibendum morbi malesuada convallis dictum semper erat, ultrices placerat pretium blandit ligula elementum, sagittis ultrices rhoncus, porttitor nec, nam, morbi viverra. Curabitur vel ornare turpis. Cras nullam vel fringilla nullam quisque, lacus nulla lacus.
-                            </p>
-                            <p>
-                                Dui magnis habitasse eros felis elementum ultrices habitant penatibus posuere, commodo euismod leo mauris massa ad dignissim vivamus. Consequat at lacus suscipit placerat in cum pharetra hendrerit, eget. Commodo leo mauris massa ad dignissim vivamus.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in, lacus suscipit lacus ad nibh condimentum nostra volutpat diam.
-                            </p>
-                            <p>
-                                Pulvinar faucibus vivamus nascetur non lacus cubilia hac, aptent a viverra sapien condimentum mus conubia, commodo luctus lobortis risus, suscipit cubilia nostra, cursus fringilla velit cum sociis aliquam. Erat blandit sed molestie interdum ultricies tempus curabitur ultrices ante in.
-                            </p>
+                            The Pirates of Penzance premiered in 1879 and was composed by Arthur Sullivan with a libretto by W. S. Gilbert. This comic opera satirizes duty, honor, and romance through the misadventures of a young pirate apprentice, featuring witty dialogue, memorable melodies, and absurd humor.                            </p>
+                            
                         </div>
 
                         {/* --- PRICE & BUTTON (Sidebar) --- */}

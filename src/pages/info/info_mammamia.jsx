@@ -42,7 +42,7 @@ const MapPinIcon = (props) => (
 );
 
 
-const TABS = ['About', 'Venue', 'Tickets', 'Reviews'];
+const TABS = ['About'];
 
 // Main Component is now named InfoLesMiserables
 const  InfoMammaMia = () => {

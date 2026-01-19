@@ -20,3 +20,42 @@
   margin-bottom: 20px;
   text-align: justify;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .texts-container {
+    width: 90%;
+    margin: 40px auto 60px auto;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .texts-container h3 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .texts-container p {
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texts-container {
+    width: 95%;
+    margin: 30px auto 50px auto;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .texts-container h3 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 8px;
+  }
+
+  .texts-container p {
+    margin-bottom: 15px;
+  }
+}
