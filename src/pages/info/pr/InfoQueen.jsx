@@ -4,9 +4,7 @@ import SeatingChartModal from "../../../components/SeatingChartModal";
 import "../info_shared.css"; // desde .../info/chr => ../info_shared.css
 
 // Ejemplo de ruta si tu imagen está en src/img/musicales/portadas/
-import image from "../../../img/musicales/fotos 'actuaciones'/5years.jpg";
-
-const CoverImage = "uploaded:imagen.png-5433566a-5cfd-4258-82bd-b92f6849e717";
+import image from "../../../img/musicales/fotos 'actuaciones'/queenversailles.jpg";
 
 // --- ICON COMPONENTS (SVG provided by user) ---
 // Se mantienen los atributos width y height para asegurar el tamaño correcto.
@@ -44,8 +42,8 @@ const MapPinIcon = (props) => (
 
 const TABS = ['About'];
 
-// Main Component is now named InfoLesMiserables
-const   Info_5years = () => {
+// Main Component is now named InfoQueen
+const InfoQueen = () => {
     const [activeTab, setActiveTab] = useState('About');
 
     const TabItem = ({ name }) => (
@@ -102,7 +100,7 @@ const   Info_5years = () => {
                   selectedDate={selectedDate}
                   onClose={closeSeating}
                   onConfirm={confirmSeats}
-                  musicalName="The last five years"
+                  musicalName="Queen of Versailles"
                 />
             </>
         );
@@ -130,18 +128,18 @@ const   Info_5years = () => {
                         {/* Rating */}
                         <div className="rating">
                             <StarIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.25rem' }} />
-                            <span>4.5</span>
+                            <span>4.1</span>
                         </div>
 
                         {/* Title */}
                         <h1 className="title">
-                            The last five years
+                            Queen of Versailles
                         </h1>
 
                         {/* Venue */}
                         <div className="venue">
                             <MapPinIcon style={{ width: '1.25rem', height: '1.25rem', marginRight: '0.5rem' }} />
-                            <span>Off-Broadway Theatre</span>
+                            <span>Nederlander Theatre</span>
                         </div>
                     </div>
                 </header>
@@ -158,7 +156,7 @@ const   Info_5years = () => {
                             </div>
                             <div className="tag-details">
                                 <span className="label">Duration</span>
-                                <span className="value">1h 30min</span>
+                                <span className="value">2h 25min</span>
                             </div>
                         </div>
 
@@ -185,7 +183,7 @@ const   Info_5years = () => {
                         {/* --- TEXT CONTENT --- */}
                         <div className="text-content">
                             <p>
-                            The Last Five Years premiered in 2002 and was written by Jason Robert Brown. This intimate two-character musical tells the story of a five-year relationship between Jamie and Cathy, with each character narrating the timeline in opposite directions, exploring love, success, and heartbreak. It was adapted into a film in 2014.                            </p>
+                            The Queen of Versailles premiered in 2023 and is based on the documentary of the same name. The musical explores the rise and financial collapse of a wealthy American family during the 2008 economic crisis, offering a satirical yet emotional look at excess, ambition, and resilience.                            </p>
                             
                         </div>
 
@@ -200,4 +198,4 @@ const   Info_5years = () => {
     );
 }
 
-export default   Info_5years;
+export default InfoQueen;

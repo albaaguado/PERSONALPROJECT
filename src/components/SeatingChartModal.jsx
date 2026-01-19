@@ -95,7 +95,6 @@ export default function SeatingChartModal({ open, selectedDate, onClose, onConfi
   const { getOccupiedSeatIdsForEvent, occupiedSeats } = useDatabase();
   const [seats] = useState(generateSeats());
   const [selectedSeats, setSelectedSeats] = useState([]);
-  const [forceUpdate, setForceUpdate] = useState(0);
 
   // Obtener asientos que ya están en el carrito para este musical y fecha
   const getSeatsInCart = () => {
@@ -147,10 +146,17 @@ export default function SeatingChartModal({ open, selectedDate, onClose, onConfi
     }
   }, [open, occupiedSeats]);
 
-  // Recalcular asientos no disponibles cuando cambien los datos
-  const seatsInCart = getSeatsInCart();
-  const occupiedSeatsFromDB = getOccupiedSeatsFromDB();
-  
+  // Calcular asientos en carrito
+  const seatsInCart = React.useMemo(() => {
+    return getSeatsInCart();
+  }, [cart, musicalName, selectedDate, seats]);
+
+  // Calcular asientos ocupados de BD
+  const occupiedSeatsFromDB = React.useMemo(() => {
+    return getOccupiedSeatsFromDB();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [musicalName, selectedDate, occupiedSeats]);
+
   // Combinar asientos en carrito y asientos ocupados de BD
   // Recalcular cada vez que cambien los asientos ocupados o el carrito
   const unavailableSeats = React.useMemo(() => {
@@ -161,7 +167,7 @@ export default function SeatingChartModal({ open, selectedDate, onClose, onConfi
       console.log('  - Ocupados en BD:', Array.from(occupiedSeatsFromDB));
     }
     return combined;
-  }, [cart, occupiedSeats, open, musicalName, selectedDate]);
+  }, [seatsInCart, occupiedSeatsFromDB, open]);
 
   useEffect(() => {
     if (!open) return;

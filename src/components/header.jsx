@@ -8,7 +8,7 @@ import { Profile } from "./profile";
 
 function Header() {
   const location = useLocation();
-  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   const [showProfile, setShowProfile] = useState(false);
   const profileRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);

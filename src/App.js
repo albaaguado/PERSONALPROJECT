@@ -37,8 +37,8 @@ import InfoWhiteChristmas from "./pages/info/chr/info_whitechristmas";
 import Info_boop from "./pages/info/pr/info_boop";
 import Info_Justintime from "./pages/info/pr/info_justintime"; 
 import Info_Pirates from "./pages/info/pr/info_pirates";
-import Info_5years from "./pages/info/pr/info_5years";
-import Info_Queen from "./pages/info/pr/info_queen"; 
+import Info5Years from "./pages/info/pr/Info5Years";
+import InfoQueen from "./pages/info/pr/InfoQueen"; 
 
 
 import History from "./pages/history";  
@@ -83,8 +83,8 @@ function App() {
         <Route path="/info/pr/info_boop" element={<Info_boop />} />
         <Route path="/info/pr/info_justintime" element={<Info_Justintime />} />
         <Route path="/info/pr/info_pirates" element={<Info_Pirates />} />
-        <Route path="/info/pr/info_5years" element={<Info_5years />} />
-        <Route path="/info/pr/info_queen" element={<Info_Queen />} />
+        <Route path="/info/pr/info_5years" element={<Info5Years />} />
+        <Route path="/info/pr/info_queen" element={<InfoQueen />} />
         <Route path="/history" element={<History />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:productName" element={<ProductDetail />} />      
