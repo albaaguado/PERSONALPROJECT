@@ -9,6 +9,7 @@ export function DatabaseProvider({ children }) {
     const initialStock = stored ? JSON.parse(stored) : {};
     let needsUpdate = false;
     
+    // SHOP PRODUCTS
     // Asegurar que todos los productos del 1 al 30 tengan stock
     for (let i = 1; i <= 30; i++) {
       // Si no existe o tiene stock 0 o menor, inicializar con 50
@@ -18,6 +19,7 @@ export function DatabaseProvider({ children }) {
       }
     }
     
+    // LIVE PRODUCT
     // Asegurar que el live tenga stock si no existe
     if (!initialStock["live-lion-king"]) {
       initialStock["live-lion-king"] = 30;
@@ -39,6 +41,8 @@ export function DatabaseProvider({ children }) {
     const updated = initializeProductsStock();
     setProductsStock(updated);
   }, []); // Solo ejecutar una vez al montar
+
+  // OCCUPIED SEATS
   const [occupiedSeats, setOccupiedSeats] = useState(() => {
     const stored = localStorage.getItem("occupiedSeats");
     return stored ? JSON.parse(stored) : [];

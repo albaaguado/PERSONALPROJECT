@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.css"; // nuevo CSS base para el layout
+import "./home.css"; 
 import ResumenVideo from "./home/video_intro";
 import Indice from "./home/indice";
 import LastMinute from "./home/last_minute";
